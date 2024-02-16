@@ -8,12 +8,29 @@
   <link rel='stylesheet' href='style.css' />
   <script src='tailwindcss.min.js'></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gradient-to-b bg-no-repeat from-blue-100 to-white">
+
+  <nav class="max-w-[2650px] mx-auto mb-2 px-2 pt-0">
+        <div class="socials flex justify-between mx-2 sm:mx-0 pt-2 pb-1">
+      
+      <a href="https://github.com/mattheweq" target="_blank">
+        <img src="https://raw.githubusercontent.com/mattheweq/icons-repo/main/github.svg">
+      </a>
+
+      <a href="https://open.spotify.com/artist/66OsKKYin7yLMQUsZxjE91" target="_blank">
+        <img  id="spotify" src="https://raw.githubusercontent.com/mattheweq/icons-repo/main/soundwave.svg">
+      </a>
+
+      <a href="mailto:mattheweq8@gmail.com">
+        <img src="https://raw.githubusercontent.com/mattheweq/icons-repo/main/email.svg">
+      </a>
+    </div>
+  </nav>
 
 
-  <div class="max-w-[2650px] mx-auto m-8 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-2">
-
-   
+  <!-- GRID -->
+  <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-2">
+     
 
    <div>
     <h2 class="text-center text-2xl font-bold mb-4">Display Percentage Amount</h2>
@@ -99,7 +116,7 @@
 
   <div>
     <h2 class="text-center text-2xl font-bold mt-16 xl:mt-0  mb-4">Calculate UK Wage (Under 50K)</h2>
-
+    
     <form id="percentageForm4" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
 
       <div class="mb-4">
@@ -111,7 +128,7 @@
     </form>
 
     <p id="result4" class="text-center mt-4 text-4xl font-semibold"></p>
- 
+    <p id="result4-info" class="text-center text-sm text-gray-500 mt-2 w-[90%] mx-auto"></p>
   </div>
 
 

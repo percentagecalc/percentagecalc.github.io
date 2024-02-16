@@ -84,6 +84,7 @@ function addPercentageToAmount() {
 function calculateWagesUnder50K() {
   const totalInput = document.getElementById('total4');
   const resultElement = document.getElementById('result4');
+  const result4Info = document.getElementById('result4-info');
 
   // remove commas, percent signs, or dots
   const totalInputCleaned = totalInput.value.replace(/[,%.]/g, '');
@@ -123,8 +124,10 @@ function calculateWagesUnder50K() {
  
   if (!isNaN(totalInputParsed)) {
     resultElement.textContent = `£${formattedResult}`;
+    result4Info.textContent = `Automatically deducts 20% Tax, 10% National Insurance, and 9% Student Loan (Plan 1)`;
   } else {
     resultElement.textContent = 'Please enter valid numeric values.';
+    result4Info.textContent = "";
   }
 
   // totalInput.value = '';
