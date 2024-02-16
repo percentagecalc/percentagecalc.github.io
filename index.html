@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Calculator</title>
+  <link rel='shortcut icon' href='https://easycss.github.io/favicon/favicon.png' type='image/x-icon' />
+  <link rel='stylesheet' href='style.css' />
+  <script src='tailwindcss.min.js'></script>
+</head>
+<body class="bg-gray-100">
+
+
+  <div class="max-w-[2650px] mx-auto m-8 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-2">
+
+   
+
+   <div>
+    <h2 class="text-center text-2xl font-bold mb-4">Display Percentage Amount</h2>
+
+    <form id="percentageForm" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+
+      <div class="mb-4">
+        <label for="percentage" class="block text-sm font-medium text-gray-600">Percentage:</label>
+        <input type="string" id="percentage" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="For example 10%" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="total" class="block text-sm font-medium text-gray-600">Total:</label>
+        <input type="string" id="total" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="For example 1000" required>
+      </div>
+
+      <button type="button" onclick="calculatePercentage()" class="bg-blue-500 text-white py-2 px-4 rounded-md">What%</button>
+    </form>
+
+    <p id="result" class="text-center mt-4 text-4xl font-semibold"></p>
+   </div>
+
+
+
+
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+<div>
+  <h2 class="text-center text-2xl font-bold mt-16 md:mt-0 mb-4">Calculate Percentage</h2>
+
+    <form id="percentageForm2" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+
+      <div class="mb-4">
+        <label for="amount2" class="block text-sm font-medium text-gray-600">Amount:</label>
+        <input type="string" id="amount2" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="For example 10" required>
+      </div>
+      
+      <div class="mb-4">
+        <label for="total2" class="block text-sm font-medium text-gray-600">Total:</label>
+        <input type="string" id="total2" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="For example 100" required>
+      </div>
+
+      <button type="button" onclick="displayPercentageAmount()" class="bg-blue-500 text-white py-2 px-4 rounded-md">IsWhat%</button>
+    </form>
+
+    <p id="result2" class="text-center mt-4 text-4xl font-semibold"></p>
+</div>
+  
+  
+  
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+  <div>
+  <h2 class="text-center text-2xl font-bold mt-16 lg:mt-0  mb-4">Add Percentage</h2>
+
+    <form id="percentageForm3" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+
+      <div class="mb-4">
+        <label for="amount3" class="block text-sm font-medium text-gray-600">Amount:</label>
+        <input type="string" id="amount3" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="For example 100" required>
+      </div>
+      
+      <div class="mb-4">
+        <label for="percentage3" class="block text-sm font-medium text-gray-600">Add Percentage</label>
+        <input type="string" id="percentage3" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="For example 10%" required>
+      </div>
+
+      <button type="button" onclick="addPercentageToAmount()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Total</button>
+    </form>
+
+    <p id="result3" class="text-center mt-4 text-4xl font-semibold"></p>
+  </div>
+
+
+
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+  <div>
+    <h2 class="text-center text-2xl font-bold mt-16 xl:mt-0  mb-4">Calculate UK Wage (Under 50K)</h2>
+
+    <form id="percentageForm4" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+
+      <div class="mb-4">
+        <label for="total4" class="block text-sm font-medium text-gray-600">Amount:</label>
+        <input type="string" id="total4" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="For example 27500" required onfocus="clearInput()">
+      </div>
+
+      <button type="button" onclick="calculateWagesUnder50K()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Take Home</button>
+    </form>
+
+    <p id="result4" class="text-center mt-4 text-4xl font-semibold"></p>
+ 
+  </div>
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
