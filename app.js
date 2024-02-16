@@ -14,9 +14,9 @@
         const calculatedPercentage = (percentage / 100) * total;
 
         // format result with commas
-        const formattedCalculatedPercentage = calculatedPercentage.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        // const formattedCalculatedPercentage = calculatedPercentage.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-        resultElement.textContent = `${percentage}% of ${total} = ${formattedCalculatedPercentage}`;
+        resultElement.textContent = `${percentage}% of ${total} = ${calculatedPercentage}`;
 
         percentageInput.value = '';
         totalInput.value = '';
@@ -80,14 +80,50 @@ function addPercentageToAmount() {
 // 
 // 
 // 
+// 
+
+
+function calcPercentageChange() {
+  const amountInput1 = document.getElementById('amount4a');
+  const amountInput2 = document.getElementById('amount4b');
+  const resultElement = document.getElementById('result4');
+
+  const amount1 = parseFloat(amountInput1.value);
+  const amount2 = parseFloat(amountInput2.value);
+
+  if (!isNaN(amount1) && !isNaN(amount2)) {
+    const percentageChange = ((amount2 - amount1) / Math.abs(amount1)) * 100;
+
+    if (amount2 > amount1) {
+      resultElement.textContent = `+${percentageChange.toFixed(0)}%`;
+    } else if (amount2 < amount1) {
+      resultElement.textContent = `${percentageChange.toFixed(0)}%`;
+    } else {
+      resultElement.textContent = 'No change in values.';
+    }
+  } else {
+    resultElement.textContent = 'Please enter valid numeric values.';
+  }
+
+  amountInput1.value = '';
+  amountInput2.value = '';
+}
+
+
+
+
+// 
+// 
+// 
+// 
 
 function calculateWagesUnder50K() {
-  const totalInput = document.getElementById('total4');
-  const resultElement = document.getElementById('result4');
-  const result4Info = document.getElementById('result4-info');
+  const totalInput = document.getElementById('total5');
+  const resultElement = document.getElementById('result5');
+  const result4Info = document.getElementById('result5-info');
 
   // remove commas, percent signs, or dots
-  const totalInputCleaned = totalInput.value.replace(/[,%.]/g, '');
+  const totalInputCleaned = totalInput.value.replace(/[,%.£]/g, '');
   
   const totalInputParsed = parseFloat(totalInputCleaned);
 
@@ -121,9 +157,11 @@ function calculateWagesUnder50K() {
 
   // Format result with commas
   const formattedResult = result.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
- 
+  const monthly = result / 12
+  const formattedMonthly = monthly.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
   if (!isNaN(totalInputParsed)) {
-    resultElement.textContent = `£${formattedResult}`;
+    resultElement.innerHTML = `<p>£${formattedResult} <span class="text-right text-[16px] text-gray-600">£${formattedMonthly} P/M</span></p>`;
     result4Info.textContent = `Automatically deducts 20% Tax, 10% National Insurance, and 9% Student Loan (Plan 1)`;
   } else {
     resultElement.textContent = 'Please enter valid numeric values.';
