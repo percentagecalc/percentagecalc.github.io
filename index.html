@@ -10,8 +10,8 @@
 </head>
 <body class="bg-gradient-to-b bg-no-repeat from-blue-100 to-white">
 
-  <nav class="max-w-[2650px] mx-auto mb-2 px-2 pt-0">
-        <div class="socials flex justify-between mx-2 sm:mx-0 pt-2 pb-1">
+  <nav class="max-w-[620px] mx-auto mb-2 px-2 pt-0">
+      <div class="socials flex justify-between mx-2 sm:mx-0 pt-2 pb-1">
       
       <a href="https://github.com/mattheweq" target="_blank">
         <img src="https://raw.githubusercontent.com/mattheweq/icons-repo/main/github.svg">
@@ -29,11 +29,11 @@
 
 
   <!-- GRID -->
-  <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-2">
+  <div class="max-w-[1500px] md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-x-4 mx-2 xl:mx-auto">
      
 
    <div>
-    <h2 class="text-center text-2xl font-bold mb-4">Display Percentage Amount</h2>
+    <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Display Percentage Amount</h2>
 
     <form id="percentageForm" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
 
@@ -51,10 +51,10 @@
         <input type="string" id="total" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
 
-      <button type="button" onclick="calculatePercentage()" class="bg-blue-500 text-white py-2 px-4 rounded-md">What%</button>
+      <button type="button" onclick="calculatePercentage()" class="bg-blue-500 text-white py-2 px-4 rounded-md">What %</button>
     </form>
 
-    <p id="result" class="bg-blue-100 text-center my-4 text-4xl font-semibold"></p>
+    <p id="result" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
    </div>
 
 
@@ -65,7 +65,7 @@
   <!--  -->
 
 <div>
-  <h2 class="text-center text-2xl font-bold mt-16 md:mt-0 mb-4">Calculate Percentage</h2>
+  <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Calculate Percentage</h2>
 
     <form id="percentageForm2" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
 
@@ -83,10 +83,10 @@
         <input type="string" id="total2" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
 
-      <button type="button" onclick="displayPercentageAmount()" class="bg-blue-500 text-white py-2 px-4 rounded-md">IsWhat%</button>
+      <button type="button" onclick="displayPercentageAmount()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Is What %</button>
     </form>
 
-    <p id="result2" class="bg-blue-100 text-center my-4 text-4xl font-semibold"></p>
+    <p id="result2" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
 </div>
   
   
@@ -96,7 +96,7 @@
   <!--  -->
 
   <div>
-  <h2 class="text-center text-2xl font-bold mt-16 lg:mt-0  mb-4">Add Percentage</h2>
+  <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Add Percentage</h2>
 
     <form id="percentageForm3" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
 
@@ -114,10 +114,10 @@
         <input type="string" id="percentage3" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
 
-      <button type="button" onclick="addPercentageToAmount()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Total +%</button>
+      <button type="button" onclick="addPercentageToAmount()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Total + %</button>
     </form>
 
-    <p id="result3" class="bg-blue-100 text-center my-4 text-4xl font-semibold"></p>
+    <p id="result3" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
   </div>
 
 
@@ -128,7 +128,7 @@
   <!--  -->
 
   <div>
-  <h2 class="text-center text-2xl font-bold mt-16 lg:mt-0  mb-4">Percentage Change</h2>
+  <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Percentage Change</h2>
 
     <form id="percentageForm4" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
 
@@ -149,7 +149,7 @@
       <button type="button" onclick="calcPercentageChange()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Total % Change</button>
     </form>
 
-    <p id="result4" class="bg-blue-100 text-center my-4 text-4xl font-semibold"></p>
+    <p id="result4" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
   </div>
 
 
@@ -160,7 +160,7 @@
   <!--  -->
 
   <div>
-    <h2 class="text-center text-2xl font-bold mt-16 xl:mt-0  mb-4">Calculate UK Wage (Under 50K)</h2>
+    <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Calculate UK Wage (Under 50K)</h2>
     
     <form id="percentageForm5" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
 
@@ -176,8 +176,8 @@
       <button type="button" onclick="calculateWagesUnder50K()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Take Home</button>
     </form>
 
-    <p id="result5" class="bg-blue-100 text-center mt-4 text-4xl font-semibold"></p>
-    <p id="result5-info" class="bg-blue-100 text-center text-sm text-gray-500 mt-2 mb-4 w-[90%] mx-auto"></p>
+    <p id="result5" class="text-center mt-4 text-4xl font-semibold"></p>
+    <p id="result5-info" class="text-center text-sm text-gray-500 mt-2 mb-4 w-[90%] mx-auto"></p>
   </div>
 
 

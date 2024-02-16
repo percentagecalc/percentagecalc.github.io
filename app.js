@@ -162,7 +162,7 @@ function calculateWagesUnder50K() {
 
   if (!isNaN(totalInputParsed)) {
     resultElement.innerHTML = `<p>£${formattedResult} <span class="text-right text-[16px] text-gray-600">£${formattedMonthly} P/M</span></p>`;
-    result4Info.textContent = `Automatically deducts 20% Tax, 10% National Insurance, and 9% Student Loan (Plan 1)`;
+    result4Info.innerHTML = `Automatically deducts 20% Tax, 10% <br/>National Insurance, and 9% Student Loan (Plan 1)`;
   } else {
     resultElement.textContent = 'Please enter valid numeric values.';
     result4Info.textContent = "";
