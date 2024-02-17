@@ -9,41 +9,41 @@
   
   --calc-bg: #fff;
   --calc-bg-form: #AFD0CE;
-  --calc-label-text: white;
-  --calc-col-label: white;
-  --calc-col-span: white;
+  --calc-label-text: black;
+  --calc-col-label: black;
+  --calc-col-span: black;
   --calc-bg-button: white;
   --calc-col-button: black;
 
   --add-bg:#fff;
   --add-bg-form:#F3D3CB;
-  --add-label-text: white;
-  --add-col-label:white;
-  --add-col-span:white;
+  --add-label-text: black;
+  --add-col-label:black;
+  --add-col-span:black;
   --add-bg-button:white;
   --add-col-button:black;
 
   --change-bg:#fff;
   --change-bg-form:#D0C6E7;
-  --change-label-text:white;
-  --change-col-label:white;
-  --change-col-span:white;
+  --change-label-text:black;
+  --change-col-label:black;
+  --change-col-span:black;
   --change-bg-button:white;
   --change-col-button:black;
 
   --vat-bg:#fff;
   --vat-bg-form:#F8CBD8;
-  --vat-label-text:white;
-  --vat-col-label:white;
-  --vat-col-span:white;
+  --vat-label-text:black;
+  --vat-col-label:black;
+  --vat-col-span:black;
   --vat-bg-button:white;
   --vat-col-button:black;
 
   --wage-bg:#fff;
   --wage-bg-form:#B7CCED;
-  --wage-label-text:white;
-  --wage-col-label:white;
-  --wage-col-span:white;
+  --wage-label-text:black;
+  --wage-col-label:black;
+  --wage-col-span:black;
   --wage-bg-button:white;
   --wage-col-button:black;
 }
