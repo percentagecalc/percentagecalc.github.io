@@ -1,3 +1,53 @@
+:root{
+  --what-bg: #fff;
+  --what-bg-form:#FFF99988;
+  --what-label-text: black;
+  --what-col-label: black;
+  --what-col-span: black;
+  --what-bg-button: white;
+  --what-col-button: black;
+  
+  --calc-bg: #fff;
+  --calc-bg-form: #008F7A55;
+  --calc-label-text: white;
+  --calc-col-label: white;
+  --calc-col-span: white;
+  --calc-bg-button: white;
+  --calc-col-button: black;
+
+  --add-bg:#fff;
+  --add-bg-form:#FF967155;
+  --add-label-text: white;
+  --add-col-label:white;
+  --add-col-span:white;
+  --add-bg-button:white;
+  --add-col-button:black;
+
+  --change-bg:#fff;
+  --change-bg-form:#845EC255;
+  --change-label-text:white;
+  --change-col-label:white;
+  --change-col-span:white;
+  --change-bg-button:white;
+  --change-col-button:black;
+
+  --vat-bg:#fff;
+  --vat-bg-form:#FF6F9155;
+  --vat-label-text:white;
+  --vat-col-label:white;
+  --vat-col-span:white;
+  --vat-bg-button:white;
+  --vat-col-button:black;
+
+  --wage-bg:#fff;
+  --wage-bg-form:#2C73D255;
+  --wage-label-text:white;
+  --wage-col-label:white;
+  --wage-col-span:white;
+  --wage-bg-button:white;
+  --wage-col-button:black;
+}
+
 .fade-in{
   opacity: 0;
   animation: fade 1s ease-in forwards;
@@ -11,21 +61,132 @@
 		opacity: 100%;
 	}
 }
+
 h2{
-  background: #1a1a1a;
-  color: white;
-  text-align: center;
+  /* background: #1a1a1a; */
+  color: black;
 }
+
+h2.what{
+  background: var(--what-bg);
+}
+form.what{
+  background: var(--what-bg-form);
+}
+label.what{
+  color: var(--what-col-label);
+}
+span.what{
+ color: var(--what-col-span);
+}
+button.what{
+  color: var(--what-col-button);
+  background: var(--what-bg-button);
+}
+
+
+h2.calc{
+  background: var(--calc-bg);
+}
+form.calc{
+  background: var(--calc-bg-form);
+}
+label.calc{
+  color: var(--calc-col-label);
+}
+span.calc{
+ color: var(--calc-col-span);
+}
+button.calc{
+  background: var(--calc-bg-button);
+  color: var(--calc-col-button);
+}
+
+
+h2.add{
+  background: var(--add-bg);
+}
+form.add{
+  background: var(--add-bg-form);
+}
+label.add{
+  color: var(--add-col-label);
+}
+span.add{
+ color: var(--add-col-span);
+}
+button.add{
+  background: var(--add-bg-button);
+  color: var(--add-col-button);
+}
+
+
+h2.change{
+  background: var(--change-bg);
+}
+form.change{
+  background: var(--change-bg-form);
+}
+label.change{
+  color: var(--change-col-label);
+}
+span.change{
+ color: var(--change-col-span);
+}
+button.change{
+  background: var(--change-bg-button);
+  color: var(--change-col-button);
+}
+
+
+h2.vat{
+  background: var(--vat-bg);
+}
+form.vat{
+  background: var(--vat-bg-form);
+}
+label.vat{
+  color: var(--vat-col-label);
+}
+span.vat{
+ color: var(--vat-col-span);
+}
+button.vat{
+  background: var(--vat-bg-button);
+  color: var(--vat-col-button);
+}
+
+
+h2.wage{
+  background: var(--wage-bg);
+}
+form.wage{
+  background: var(--wage-bg-form);
+}
+label.wage{
+  color: var(--wage-col-label);
+}
+span.wage{
+ color: var(--wage-col-span);
+}
+button.wage{
+  background: var(--wage-bg-button);
+  color: var(--wage-col-button);
+}
+
+/*  */
+/*  */
+/*  */
 /* SVG ICONS */
 .socials img{
   width: 30px;
   height: auto;
-  filter: invert(.7) grayscale(50%) brightness(50%);
+  filter: invert(1);
 }
 .socials img:hover{
   width: 30px;
   height: auto;
-  filter: invert(0) grayscale(100%) brightness(200%);
+  filter: invert(0);
 }
 
 #spotify{
