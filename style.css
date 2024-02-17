@@ -1,6 +1,6 @@
 :root{
   --what-bg: #fff;
-  --what-bg-form:#FFF99988;
+  --what-bg-form:#F6F5C5;
   --what-label-text: black;
   --what-col-label: black;
   --what-col-span: black;
@@ -8,7 +8,7 @@
   --what-col-button: black;
   
   --calc-bg: #fff;
-  --calc-bg-form: #008F7A55;
+  --calc-bg-form: #AFD0CE;
   --calc-label-text: white;
   --calc-col-label: white;
   --calc-col-span: white;
@@ -16,7 +16,7 @@
   --calc-col-button: black;
 
   --add-bg:#fff;
-  --add-bg-form:#FF967155;
+  --add-bg-form:#F3D3CB;
   --add-label-text: white;
   --add-col-label:white;
   --add-col-span:white;
@@ -24,7 +24,7 @@
   --add-col-button:black;
 
   --change-bg:#fff;
-  --change-bg-form:#845EC255;
+  --change-bg-form:#D0C6E7;
   --change-label-text:white;
   --change-col-label:white;
   --change-col-span:white;
@@ -32,7 +32,7 @@
   --change-col-button:black;
 
   --vat-bg:#fff;
-  --vat-bg-form:#FF6F9155;
+  --vat-bg-form:#F8CBD8;
   --vat-label-text:white;
   --vat-col-label:white;
   --vat-col-span:white;
@@ -40,7 +40,7 @@
   --vat-col-button:black;
 
   --wage-bg:#fff;
-  --wage-bg-form:#2C73D255;
+  --wage-bg-form:#B7CCED;
   --wage-label-text:white;
   --wage-col-label:white;
   --wage-col-span:white;
