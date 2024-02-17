@@ -28,14 +28,21 @@
   </nav>
 
 
+<!--  -->
+<!--  -->
+<!--  -->
+
+<!-- CONTAINER -->
+<main class="max-w-[1500px] mx-2 xl:mx-auto ">
+
   <!-- GRID -->
-  <div class="max-w-[1500px] md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-x-4 mx-2 xl:mx-auto">
+  <div class="md:flex md:flex-wrap md:gap-4">
      
 
-   <div>
-    <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Display Percentage Amount</h2>
+   <div class="md:min-w-[450px] mx-auto">
 
-    <form id="percentageForm" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+    <form id="percentageForm" class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+    <h2 class="text-center text-2xl font-bold mb-6 p-2">Display Percentage Amount</h2>
 
       <div class="mb-4">
         <div class="flex justify-between">
@@ -64,10 +71,11 @@
   <!--  -->
   <!--  -->
 
-<div>
-  <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Calculate Percentage</h2>
+<div class="md:min-w-[450px] mx-auto">
 
-    <form id="percentageForm2" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+    <form id="percentageForm2" class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+    
+    <h2 class="text-center text-2xl font-bold mb-6 p-2">Calculate Percentage</h2>
 
       <div class="mb-4">
         <div class="flex justify-between">
@@ -95,11 +103,12 @@
   <!--  -->
   <!--  -->
 
-  <div>
-  <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Add Percentage</h2>
+  <div class="md:min-w-[450px] mx-auto">
 
-    <form id="percentageForm3" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+    <form id="percentageForm3" class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
 
+    <h2 class="text-center text-2xl font-bold mb-6 p-2">Add Percentage</h2>
+    
       <div class="mb-4">
         <div class="flex justify-between">
           <label for="amount3" class="block text-sm font-medium text-gray-600">Amount:</label>
@@ -123,15 +132,16 @@
 
 
 
-<!--  -->
   <!--  -->
   <!--  -->
+  <!--  -->
 
-  <div>
-  <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Percentage Change</h2>
+  <div class="md:min-w-[450px] mx-auto">
 
-    <form id="percentageForm4" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+    <form id="percentageForm4" class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
 
+    <h2 class="text-center text-2xl font-bold mb-6 p-2">Percentage Change</h2>
+    
       <div class="mb-4">
         <div class="flex justify-between">
           <label for="amount4a" class="block text-sm font-medium text-gray-600">Amount 1:</label>
@@ -153,16 +163,42 @@
   </div>
 
 
-
-
   <!--  -->
   <!--  -->
   <!--  -->
 
-  <div>
-    <h2 class="max-w-[450px] mx-auto text-center text-2xl font-bold">Calculate UK Wage (Under 50K)</h2>
+  <div class="md:min-w-[450px] mx-auto">
+
+    <form id="vatcalc" class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+
+    <h2 class="text-center text-2xl font-bold mb-6 p-2">VAT Calculator</h2>
     
-    <form id="percentageForm5" class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+      <div class="mb-4">
+        <div class="flex justify-between">
+          <label for="vatcalc" class="block text-sm font-medium text-gray-600">Amount</label>
+          <span class="text-right text-sm text-gray-500">£10 + 20% VAT?</span>
+        </div>
+
+        <input type="string" id="vatAmount" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
+      </div>
+
+      <button type="button" onclick="addVat()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Add VAT</button>
+    </form>
+
+    <p id="vatResult" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
+  </div>
+
+
+
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+  <div class="md:min-w-[450px] mx-auto">
+    
+    <form id="percentageForm5" class="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+    
+    <h2 class="text-center text-2xl font-bold mb-6 p-2">Calculate UK Wage (Under 50K)</h2>
 
       <div class="mb-4">
         <div class="flex justify-between">
@@ -172,8 +208,9 @@
 
         <input type="string" id="total5" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="27500" required onfocus="clearInput()">
       </div>
-
+      
       <button type="button" onclick="calculateWagesUnder50K()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Take Home</button>
+      
     </form>
 
     <p id="result5" class="text-center mt-4 text-4xl font-semibold"></p>
@@ -182,6 +219,7 @@
 
 
 
+</main>
 
 <script src="app.js"></script>
 </body>

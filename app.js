@@ -110,6 +110,29 @@ function calcPercentageChange() {
 }
 
 
+// 
+// 
+// 
+// 
+
+
+function addVat() {
+  const amountInput = document.getElementById('vatAmount');
+  const resultElement = document.getElementById('vatResult');
+
+  const amount = parseFloat(amountInput.value);
+
+  if (!isNaN(amount)) {
+    const calculatedPercentage = amount + (amount * 20 / 100);
+    
+    resultElement.textContent = `£${amountInput.value} + 20% VAT = £${calculatedPercentage}`;
+  } else {
+    resultElement.textContent = 'Please enter valid numeric values.';
+  }
+
+  amountInput.value = '';
+}
+
 
 
 // 
