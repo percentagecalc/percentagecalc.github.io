@@ -1,3 +1,16 @@
+.fade-in{
+  opacity: 0;
+  animation: fade 1s ease-in forwards;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
 h2{
   background: #1a1a1a;
   color: white;
