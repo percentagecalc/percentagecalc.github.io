@@ -1,5 +1,5 @@
 ## Percentage Calculators
 
-[LIVE SITE](https://calc.olk1.com/)
+[LIVE SITE](https://percentagecalc.github.io)
 
 ![ALT:preview](preview.png)
