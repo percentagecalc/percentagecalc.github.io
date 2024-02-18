@@ -16,7 +16,7 @@
         // format result with commas
         // const formattedCalculatedPercentage = calculatedPercentage.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-        resultElement.textContent = `${percentage}% of ${total} = ${calculatedPercentage}`;
+        resultElement.textContent = `${percentage}% of ${total} = ${calculatedPercentage.toFixed(2)}`;
 
         percentageInput.value = '';
         totalInput.value = '';
@@ -41,7 +41,7 @@ function displayPercentageAmount() {
 
   if (!isNaN(total) && !isNaN(amount)) {
     const calculatedPercentage = (amount / total) * 100;
-    resultElement.textContent = `${amountInput.value} is ${calculatedPercentage}% of ${totalInput.value}`;
+    resultElement.textContent = `${amountInput.value} is ${calculatedPercentage.toFixed(2)}% of ${totalInput.value}`;
   } else {
     resultElement.textContent = 'Please enter valid numeric values.';
   }
@@ -66,7 +66,7 @@ function addPercentageToAmount() {
   if (!isNaN(percentage) && !isNaN(amount)) {
     const calculatedPercentage = amount + (amount * percentage / 100);
     
-    resultElement.textContent = `${amountInput.value} + ${percentageInput.value}% = ${calculatedPercentage}`;
+    resultElement.textContent = `${amountInput.value} + ${percentageInput.value}% = ${calculatedPercentage.toFixed(2)}`;
   } else {
     resultElement.textContent = 'Please enter valid numeric values.';
   }
@@ -125,7 +125,7 @@ function addVat() {
   if (!isNaN(amount)) {
     const calculatedPercentage = amount + (amount * 20 / 100);
     
-    resultElement.textContent = `£${amountInput.value} + 20% VAT = £${calculatedPercentage}`;
+    resultElement.textContent = `£${amountInput.value} + 20% VAT = £${calculatedPercentage.toFixed(2)}`;
   } else {
     resultElement.textContent = 'Please enter valid numeric values.';
   }
