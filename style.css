@@ -22,6 +22,14 @@
   --add-col-span:black;
   --add-bg-button:white;
   --add-col-button:black;
+  
+  --minus-bg:#fff;
+  --minus-bg-form:#cccccc88;
+  --minus-label-text: black;
+  --minus-col-label:black;
+  --minus-col-span:black;
+  --minus-bg-button:white;
+  --minus-col-button:black;
 
   --change-bg:#fff;
   --change-bg-form:#D0C6E7;
@@ -41,6 +49,8 @@
 
   --wage-bg:#fff;
   --wage-bg-form:#B7CCED;
+  --student-loan-bg-button: green;
+  --student-loan-bg-button-text: white;
   --wage-label-text:black;
   --wage-col-label:black;
   --wage-col-span:black;
@@ -121,6 +131,24 @@ button.add{
 }
 
 
+h2.minus{
+  background: var(--minus-bg);
+}
+form.minus{
+  background: var(--minus-bg-form);
+}
+label.minus{
+  color: var(--minus-col-label);
+}
+span.minus{
+ color: var(--minus-col-span);
+}
+button.minus{
+  background: var(--minus-bg-button);
+  color: var(--minus-col-button);
+}
+
+
 h2.change{
   background: var(--change-bg);
 }
@@ -173,6 +201,10 @@ button.wage{
   background: var(--wage-bg-button);
   color: var(--wage-col-button);
 }
+button.wage.studentLoadChecked{
+  background: var(--student-loan-bg-button);
+  color: var(--student-loan-bg-button-text);
+}
 
 /*  */
 /*  */
@@ -184,12 +216,15 @@ button.wage{
   filter: invert(1);
 }
 .socials img:hover{
-  width: 30px;
-  height: auto;
   filter: invert(0);
 }
 
 #spotify{
   width: 45px;
   margin: -10px 5px 0;
+  filter: invert(0);
+}
+
+#spotify:hover{
+  filter: invert(1);
 }

@@ -33,12 +33,11 @@
 <!--  -->
 
 <!-- CONTAINER -->
-<main class="max-w-[1500px] mx-2 xl:mx-auto ">
+<main class="max-w-[1500px] mx-2 xl:mx-auto">
 
   <!-- GRID -->
-  <div class="md:flex md:flex-wrap xl:gap-y-6">
+  <div class="flex flex-col gap-y-4 md:flex-row md:flex md:flex-wrap md:gap-y-6">
      
-
    <div class="md:min-w-[450px] mx-auto">
 
     <form id="percentageForm" class="what max-w-md mx-auto p-8 rounded-md shadow-md">
@@ -50,18 +49,19 @@
           <span class="what text-right text-sm">What is 10% of 100?</span>
         </div>
 
-        <input type="string" id="percentage" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
+        <input onfocus="clearInput(this)" type="string" id="percentage" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
 
       <div class="mb-4">
         <label for="total" class="what block text-sm font-medium">Total:</label>
-        <input type="string" id="total" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
+        <input onfocus="clearInput(this)" type="string" id="total" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
 
       <button type="button" onclick="calculatePercentage()" class="what mt-2 py-2 px-4 rounded-md font-bold">What %</button>
+      
+      <p id="result"></p>
     </form>
 
-    <p id="result" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
    </div>
 
 
@@ -83,18 +83,19 @@
           <span class="text-right text-sm calc">10% is what percentage of 1000?</span>
         </div>
         
-        <input type="string" id="amount2" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
+        <input onfocus="clearInput(this)" type="string" id="amount2" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
       
       <div class="mb-4">
         <label for="total2" class="block text-sm font-medium calc">Total:</label>
-        <input type="string" id="total2" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
+        <input onfocus="clearInput(this)" type="string" id="total2" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
 
       <button type="button" onclick="displayPercentageAmount()" class="calc mt-2 py-2 px-4 rounded-md font-bold">Is What %</button>
+      
+      <p id="result2"></p>
     </form>
 
-    <p id="result2" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
 </div>
   
   
@@ -115,18 +116,19 @@
           <span class="text-right text-sm add">What is 100 plus 10% percent?</span>
         </div>
 
-        <input type="string" id="amount3" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
+        <input onfocus="clearInput(this)" type="string" id="amount3" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
       
       <div class="mb-4">
         <label for="percentage3" class="block text-sm font-medium add">Add Percentage:</label>
-        <input type="string" id="percentage3" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
+        <input onfocus="clearInput(this)" type="string" id="percentage3" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
 
       <button type="button" onclick="addPercentageToAmount()" class="add mt-2 py-2 px-4 rounded-md font-bold">Total + %</button>
+      
+      <p id="result3"></p>
     </form>
 
-    <p id="result3" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
   </div>
 
 
@@ -135,6 +137,47 @@
   <!--  -->
   <!--  -->
   <!--  -->
+
+
+
+  <div class="md:min-w-[450px] mx-auto">
+
+    <form id="minusPercentForm" class="minus max-w-md mx-auto p-8 rounded-md shadow-md">
+
+    <h2 class="minus text-center text-2xl font-bold mb-6 p-2">Subtract Percentage</h2>
+    
+      <div class="mb-4">
+        <div class="flex justify-between">
+          <label for="minusPercentAmount" class="block text-sm font-medium minus">Amount:</label>
+          <span class="text-right text-sm minus">What is 100 minus 10% percent?</span>
+        </div>
+
+        <input onfocus="clearInput(this)" type="string" id="minusPercentAmount" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
+      </div>
+      
+      <div class="mb-4">
+        <label for="minusPercent" class="block text-sm font-medium minus">Add Percentage:</label>
+        <input onfocus="clearInput(this)" type="string" id="minusPercent" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
+      </div>
+
+      <button type="button" onclick="minusPercentageToAmount()" class="minus mt-2 py-2 px-4 rounded-md font-bold">Total - %</button>
+      
+      <p id="resultMinus"></p>
+    </form>
+
+  </div>
+
+
+
+
+
+
+
+
+  <!--  -->
+  <!--  -->
+  <!--  -->
+  
 
   <div class="md:min-w-[450px] mx-auto">
 
@@ -148,18 +191,19 @@
           <span class="text-right text-sm change">10 to 100 is what percent change?</span>
         </div>
 
-        <input type="string" id="amount4a" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
+        <input onfocus="clearInput(this)" type="string" id="amount4a" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
       
       <div class="mb-4">
         <label for="amount4b" class="block text-sm font-medium change">Amount 2:</label>
-        <input type="string" id="amount4b" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
+        <input onfocus="clearInput(this)" type="string" id="amount4b" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
 
       <button type="button" onclick="calcPercentageChange()" class="change mt-2 py-2 px-4 rounded-md font-bold">Total % Change</button>
+      
+      <p id="result4"></p>
     </form>
 
-    <p id="result4" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
   </div>
 
 
@@ -179,13 +223,14 @@
           <span class="text-right text-sm vat">£10 + 20% VAT?</span>
         </div>
 
-        <input type="string" id="vatAmount" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
+        <input onfocus="clearInput(this)" type="string" id="vatAmount" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
 
       <button type="button" onclick="addVat()" class="vat mt-2 py-2 px-4 rounded-md font-bold">Add VAT</button>
+      
+      <p id="resultVat"></p>
     </form>
 
-    <p id="vatResult" class="text-center mt-4 mb-6 text-4xl font-semibold"></p>
   </div>
 
 
@@ -194,9 +239,41 @@
   <!--  -->
   <!--  -->
 
- 
+  <div class="md:min-w-[450px] mx-auto">
+    
+    <form id="percentageForm5" class="wage max-w-md mx-auto p-8 rounded-md shadow-md">
+    
+    <h2 class="wage text-center text-2xl font-bold mb-6 p-2">Calculate UK Wage (Under 50K)</h2>
+
+      <div class="mb-4">
+        <div class="flex justify-between">
+          <label for="total5" class="block text-sm font-medium wage">Amount:</label>
+          <span class="text-right text-sm wage">Pre-Tax Annual Salary is £27,500?</span>
+        </div>
+
+        <input type="string" id="total5" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="27500" required onfocus="clearInput(this)">
+      </div>
+      
+      <div class="flex justify-between items-center">
+        <button id="taxBtn" type="button" onclick="calculateWagesUnder50K()" class="wage mt-2 py-2 px-4 rounded-md font-bold">Take Home</button>
+        
+        <div class="flex items-center justify-center mt-2 mr-0">
+          <label for="checkit" class="inline-flex items-center text-center text-sm pr-3 select-none leading-tight">Student Loan<br/>(Plan 1)</label>
+          <input onchange="checkedOut()" name="checkit" type="checkbox" id="studentLoan" class="block bg-white border-2 border-gray-300 w-8 h-8 rounded-md">
+        </div>
+      </div>
+      
+      <p id="result5"></p>
+    </form>
+
+  </div>
+
 
 </main>
+
+<footer class="flex justify-center text-center mt-8 pb-[80px]">
+  <p class="text-red-300"><span class="font-bold">Disclaimer: </span>If your calculations are critical, always double check the results with a second source.</p>
+</footer>
 
 <script src="app.js"></script>
 </body>
