@@ -216,6 +216,7 @@ function calculateWagesUnder50K() {
   let ninePercentOfRemainder;
   let ni;
 
+  // April 2024 Threshold
   if(totalInputParsed >= 24990 && checkBox.checked){
     let remainderAfter24990 = totalInputParsed - 24990;
     ninePercentOfRemainder = 0.09 * remainderAfter24990;
@@ -236,7 +237,7 @@ function calculateWagesUnder50K() {
   const formattedMonthly = monthly.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   if (!isNaN(totalInputParsed)) {
-    resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">£${formattedResult} <span class="text-right text-[16px] text-gray-600">£${formattedMonthly} P/M</span></p><p class="text-center text-sm text-gray-700 mt-2 w-[90%] mx-auto">Automatically deducts 20% Tax, <br/>10% National Insurance ${ni}</p>`;
+    resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">£${formattedResult}</p><p class="text-center text-[18px] text-gray-600">£${formattedMonthly} P/M</p><p class="text-center text-sm text-gray-700 mt-2 w-[90%] mx-auto">Automatically deducts 20% Tax, <br/>10% National Insurance ${ni}</p>`;
   } else {
     resultElement.innerHTML = `<p class="mt-8">Please enter valid numeric values.</p>`;
   }
