@@ -1,3 +1,32 @@
+function isWhatPercent() {
+  const amountA = document.getElementById('amountA'); // e.g., 9
+  const amountB = document.getElementById('amountB'); // e.g., 194
+  const resultElement = document.getElementById('howResult');
+
+  // Clean the inputs
+  const valueA = amountA.value.replace(/,/g, '');
+  const valueB = amountB.value.replace(/,/g, '');
+
+  const numA = parseFloat(valueA);
+  const numB = parseFloat(valueB);
+
+  if (!isNaN(numA) && !isNaN(numB) && numB !== 0) {
+    const percentage = (numA / numB) * 100;
+    const formattedPercentage = percentage % 1 === 0 ? percentage : percentage.toFixed(4);
+
+    resultElement.innerHTML = `${numA} is ${formattedPercentage}% of ${numB}`;
+
+    // Optional: clear input fields
+    // amountA.value = '';
+    // amountB.value = '';
+  } else {
+    resultElement.innerHTML = `<p class="text-lg ml-2">Please enter valid numeric values.</p>`;
+  }
+}
+
+
+
+
  function calculatePercentage() {
     const totalInput = document.getElementById('total');
     const percentageInput = document.getElementById('percentage');
@@ -13,13 +42,13 @@
     if (!isNaN(total) && !isNaN(percentage)) {
       const calculatedPercentage = (percentage / 100) * total;
 
-      resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">${percentage}% of ${total} = ${calculatedPercentage % 1 === 0 ? calculatedPercentage : calculatedPercentage.toFixed(4)}</p>`;
+      resultElement.innerHTML = `${percentage}% of ${total} = ${calculatedPercentage % 1 === 0 ? calculatedPercentage : calculatedPercentage.toFixed(4)}`;
 
       // clear inputs when submitted
       // percentageInput.value = '';
       // totalInput.value = '';
     } else {
-        resultElement.innerHTML = `<p class="mt-8">Please enter valid numeric values.</p>`;
+        resultElement.innerHTML = `<p class="text-lg ml-2">Please enter valid numeric values.</p>`;
     }
 }
 
@@ -39,9 +68,9 @@ function displayPercentageAmount() {
 
   if (!isNaN(total) && !isNaN(amount)) {
     const calculatedPercentage = (amount / total) * 100;
-    resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">${amountInput.value} is ${calculatedPercentage % 1 === 0 ? calculatedPercentage : calculatedPercentage.toFixed(4)}% of ${totalInput.value}</p>`;
+    resultElement.innerHTML = `${amountInput.value} is ${calculatedPercentage % 1 === 0 ? calculatedPercentage : calculatedPercentage.toFixed(4)}% of ${totalInput.value}`;
   } else {
-    resultElement.innerHTML = `<p class="mt-8">Please enter valid numeric values.</p>`;
+    resultElement.innerHTML = `<p class="text-lg ml-2">Please enter valid numeric values.</p>`;
   }
 
   // clear inputs when submitted
@@ -65,9 +94,9 @@ function addPercentageToAmount() {
   if (!isNaN(percentage) && !isNaN(amount)) {
     const calculatedPercentage = amount + (amount * percentage / 100);
     
-    resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">${amountInput.value} + ${percentageInput.value}% = ${calculatedPercentage % 1 === 0 ? calculatedPercentage : calculatedPercentage.toFixed(4)}</p>`;
+    resultElement.innerHTML = `${amountInput.value} + ${percentageInput.value}% = ${calculatedPercentage % 1 === 0 ? calculatedPercentage : calculatedPercentage.toFixed(4)}`;
   } else {
-    resultElement.innerHTML = `<p class="mt-8">Please enter valid numeric values.</p>`;
+    resultElement.innerHTML = `<p class="text-lg ml-2">Please enter valid numeric values.</p>`;
   }
 
   // clear inputs when submitted
@@ -94,9 +123,9 @@ function minusPercentageToAmount() {
   if (!isNaN(percentage) && !isNaN(amount)) {
     const calculatedPercentage = amount - (amount * percentage / 100);
     
-    resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">${amountInput.value} - ${percentageInput.value}% = ${calculatedPercentage % 1 === 0 ? calculatedPercentage : calculatedPercentage.toFixed(4)}</p>`;
+    resultElement.innerHTML = `${amountInput.value} - ${percentageInput.value}% = ${calculatedPercentage % 1 === 0 ? calculatedPercentage : calculatedPercentage.toFixed(4)}`;
   } else {
-    resultElement.innerHTML = `<p class="mt-8">Please enter valid numeric values.</p>`;
+    resultElement.innerHTML = `<p class="text-lg ml-2">Please enter valid numeric values.</p>`;
   }
 
   // clear inputs when submitted
@@ -124,14 +153,14 @@ function calcPercentageChange() {
     const percentageChange = ((amount2 - amount1) / Math.abs(amount1)) * 100;
 
     if (amount2 > amount1) {
-      resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">+${percentageChange % 1 === 0 ? percentageChange : percentageChange.toFixed(4)}%</p>`;
+      resultElement.innerHTML = `+${percentageChange % 1 === 0 ? percentageChange : percentageChange.toFixed(4)}%`;
     } else if (amount2 < amount1) {
-      resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">${percentageChange % 1 === 0 ? percentageChange : percentageChange.toFixed(4)}%</p>`;
+      resultElement.innerHTML = `${percentageChange % 1 === 0 ? percentageChange : percentageChange.toFixed(4)}%`;
     } else {
-      resultElement.innerHTML = `<p class="mt-8">No change in values.</p>`;
+      resultElement.innerHTML = `<p class="text-lg ml-2">No change in values.</p>`;
     }
   } else {
-    resultElement.innerHTML = `<p class="mt-8">Please enter valid numeric values.</p>`;
+    resultElement.innerHTML = `<p class="text-lg ml-2">Please enter valid numeric values.</p>`;
   }
 
   // clear inputs when submitted
@@ -155,9 +184,9 @@ function addVat() {
   if (!isNaN(amount)) {
     const calculatedPercentage = amount + (amount * 20 / 100);
     
-    resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">£${amountInput.value} + 20% VAT = £${calculatedPercentage.toFixed(2)}</p>`;
+    resultElement.innerHTML = `£${amountInput.value} + 20% VAT = £${calculatedPercentage.toFixed(2)}`;
   } else {
-    resultElement.innerHTML = `<p class="mt-8">Please enter valid numeric values.</p>`;
+    resultElement.innerHTML = `<p class="text-lg ml-2">Please enter valid numeric values.</p>`;
   }
 
   // clear input when submitted
@@ -239,7 +268,7 @@ function calculateWagesUnder50K() {
   if (!isNaN(totalInputParsed)) {
     resultElement.innerHTML = `<p class="text-center mt-8 text-4xl font-semibold">£${formattedResult}</p><p class="text-center text-[18px] text-gray-600">£${formattedMonthly} P/M</p><p class="text-center text-sm text-gray-700 mt-2 w-[90%] mx-auto">Automatically deducts 20% Tax, <br/>10% National Insurance ${ni}</p>`;
   } else {
-    resultElement.innerHTML = `<p class="mt-8">Please enter valid numeric values.</p>`;
+    resultElement.innerHTML = `<p class="text-lg ml-2">Please enter valid numeric values.</p>`;
   }
 
   // clear input when submitted

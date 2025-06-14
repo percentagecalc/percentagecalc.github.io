@@ -17,10 +17,6 @@
         <img src="https://raw.githubusercontent.com/mattheweq/icons-repo/main/github.svg">
       </a>
 
-      <a href="https://open.spotify.com/artist/66OsKKYin7yLMQUsZxjE91" target="_blank">
-        <img  id="spotify" src="https://raw.githubusercontent.com/mattheweq/icons-repo/main/soundwave.svg">
-      </a>
-
       <a href="mailto:mattheweq8@gmail.com">
         <img src="https://raw.githubusercontent.com/mattheweq/icons-repo/main/email.svg">
       </a>
@@ -38,10 +34,65 @@
   <!-- GRID -->
   <div class="flex flex-col gap-y-5 gap-x-4 md:flex-row md:flex md:flex-wrap">
      
+
+
+      <!--  -->
+     <!--  -->
+     <!--  -->
+     <!--  -->
    <div class="min-w-full md:min-w-[450px] mx-auto">
 
-    <form id="percentageForm" class="what max-w-md mx-auto p-8 rounded-md shadow-md">
-    <h2 class="what text-center text-2xl font-bold mb-6 p-2">Percentage Amount</h2>
+    <form id="howPercentageForm" class="how max-w-md mx-auto p-6 rounded-md shadow-md">
+    <h2 class="how text-center text-2xl font-bold mb-6 p-2">n of Amount Is What Percent?</h2>
+
+      <div class="mb-4">
+        <div class="flex justify-between">
+          <label for="amountA" class="how block text-sm font-medium">Amount A:</label>
+          <span class="how text-right text-sm">9 of 194 is what %?</span>
+        </div>
+
+        <input onfocus="clearInput(this)" type="string" id="amountA" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="9" required>
+      </div>
+      
+      <div class="mb-4">
+        <div class="flex justify-between">
+          <label for="amountB" class="how block text-sm font-medium">Amount B:</label>
+        </div>
+
+        <input onfocus="clearInput(this)" type="string" id="amountB" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="194" required>
+      </div>
+
+      <div class="flex justify-between items-center">
+        <button type="button" onclick="isWhatPercent()" class="how mt-3 py-2 px-3 rounded-md font-bold text-sm">what %</button>
+      
+        <p id="howResult" class="text-2xl"></p>
+      </div>
+    </form>
+
+   </div>
+
+
+
+
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+
+
+
+
+
+
+
+     <!--  -->
+     <!--  -->
+     <!--  -->
+     <!--  -->
+   <div class="min-w-full md:min-w-[450px] mx-auto">
+
+    <form id="percentageForm" class="what max-w-md mx-auto p-6 rounded-md shadow-md">
+    <h2 class="what text-center text-2xl font-bold mb-6 p-2">What Is n% Of 100?</h2>
 
       <div class="mb-4">
         <div class="flex justify-between">
@@ -57,10 +108,12 @@
         <input onfocus="clearInput(this)" type="string" id="total" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
 
-      <button type="button" onclick="calculatePercentage()" class="what mt-2 py-2 px-4 rounded-md font-bold">What %</button>
+    <div class="flex justify-between items-center">
+      <button type="button" onclick="calculatePercentage()" class="what mt-3 py-2 px-3 rounded-md font-bold text-sm">What %</button>
       
-      <p id="result"></p>
-    </form>
+      <p id="result" class="text-2xl"></p>
+    </div>
+  </form>
 
    </div>
 
@@ -73,9 +126,9 @@
 
 <div class="min-w-full md:min-w-[450px] mx-auto">
 
-    <form id="percentageForm2" class="calc max-w-md mx-auto p-8 rounded-md shadow-md">
+    <form id="percentageForm2" class="calc max-w-md mx-auto p-6 rounded-md shadow-md">
     
-    <h2 class="calc text-center text-2xl font-bold mb-6 p-2">Calculate Percentage</h2>
+    <h2 class="calc text-center text-2xl font-bold mb-6 p-2">n% Is What % Of Total?</h2>
 
       <div class="mb-4">
         <div class="flex justify-between">
@@ -91,10 +144,12 @@
         <input onfocus="clearInput(this)" type="string" id="total2" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
 
-      <button type="button" onclick="displayPercentageAmount()" class="calc mt-2 py-2 px-4 rounded-md font-bold">Is What %</button>
+    <div class="flex justify-between items-center">
+      <button type="button" onclick="displayPercentageAmount()" class="calc mt-3 py-2 px-3 rounded-md font-bold text-sm">Is What %</button>
       
-      <p id="result2"></p>
-    </form>
+      <p id="result2" class="text-2xl"></p>
+    </div>
+  </form>
 
 </div>
   
@@ -106,9 +161,9 @@
 
   <div class="min-w-full md:min-w-[450px] mx-auto">
 
-    <form id="percentageForm3" class="add max-w-md mx-auto p-8 rounded-md shadow-md">
+    <form id="percentageForm3" class="add max-w-md mx-auto p-6 rounded-md shadow-md">
 
-    <h2 class="add text-center text-2xl font-bold mb-6 p-2">Add Percentage</h2>
+    <h2 class="add text-center text-2xl font-bold mb-6 p-2">Amount plus n%</h2>
     
       <div class="mb-4">
         <div class="flex justify-between">
@@ -124,10 +179,12 @@
         <input onfocus="clearInput(this)" type="string" id="percentage3" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
 
-      <button type="button" onclick="addPercentageToAmount()" class="add mt-2 py-2 px-4 rounded-md font-bold">Total + %</button>
+    <div class="flex justify-between items-center">
+      <button type="button" onclick="addPercentageToAmount()" class="add mt-3 py-2 px-3 rounded-md font-bold text-sm">Total + %</button>
       
-      <p id="result3"></p>
-    </form>
+      <p id="result3" class="text-2xl"></p>
+    </div>
+  </form>
 
   </div>
 
@@ -142,9 +199,9 @@
 
   <div class="min-w-full md:min-w-[450px] mx-auto">
 
-    <form id="minusPercentForm" class="minus max-w-md mx-auto p-8 rounded-md shadow-md">
+    <form id="minusPercentForm" class="minus max-w-md mx-auto p-6 rounded-md shadow-md">
 
-    <h2 class="minus text-center text-2xl font-bold mb-6 p-2">Subtract Percentage</h2>
+    <h2 class="minus text-center text-2xl font-bold mb-6 p-2">Amount minus n%</h2>
     
       <div class="mb-4">
         <div class="flex justify-between">
@@ -160,10 +217,12 @@
         <input onfocus="clearInput(this)" type="string" id="minusPercent" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
 
-      <button type="button" onclick="minusPercentageToAmount()" class="minus mt-2 py-2 px-4 rounded-md font-bold">Total - %</button>
+    <div class="flex justify-between items-center">
+      <button type="button" onclick="minusPercentageToAmount()" class="minus mt-3 py-2 px-3 rounded-md font-bold text-sm">Total - %</button>
       
-      <p id="resultMinus"></p>
-    </form>
+      <p id="resultMinus" class="text-2xl"></p>
+    </div>
+  </form>
 
   </div>
 
@@ -181,13 +240,13 @@
 
   <div class="min-w-full md:min-w-[450px] mx-auto">
 
-    <form id="percentageForm4" class="change max-w-md mx-auto p-8 rounded-md shadow-md">
+    <form id="percentageForm4" class="change max-w-md mx-auto p-6 rounded-md shadow-md">
 
-    <h2 class="change text-center text-2xl font-bold mb-6 p-2">Percentage Change</h2>
+    <h2 class="change text-center text-2xl font-bold mb-6 p-2">A to B is What % Change?</h2>
     
       <div class="mb-4">
         <div class="flex justify-between">
-          <label for="amount4a" class="block text-sm font-medium change">Amount 1:</label>
+          <label for="amount4a" class="block text-sm font-medium change">Amount A:</label>
           <span class="text-right text-sm change">10 to 100 is what percent change?</span>
         </div>
 
@@ -195,14 +254,16 @@
       </div>
       
       <div class="mb-4">
-        <label for="amount4b" class="block text-sm font-medium change">Amount 2:</label>
+        <label for="amount4b" class="block text-sm font-medium change">Amount B:</label>
         <input onfocus="clearInput(this)" type="string" id="amount4b" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="100" required>
       </div>
 
-      <button type="button" onclick="calcPercentageChange()" class="change mt-2 py-2 px-4 rounded-md font-bold">Total % Change</button>
+    <div class="flex justify-between items-center">
+      <button type="button" onclick="calcPercentageChange()" class="change mt-3 py-2 px-3 rounded-md font-bold text-sm">Total % Change</button>
       
-      <p id="result4"></p>
-    </form>
+      <p id="result4" class="text-2xl"></p>
+    </div>
+  </form>
 
   </div>
 
@@ -213,9 +274,9 @@
 
   <div class="min-w-full md:min-w-[450px] mx-auto">
 
-    <form id="vatcalc" class="vat max-w-md mx-auto p-8 rounded-md shadow-md">
+    <form id="vatcalc" class="vat max-w-md mx-auto p-6 rounded-md shadow-md">
 
-    <h2 class="vat text-center text-2xl font-bold mb-6 p-2">VAT Calculator</h2>
+    <h2 class="vat text-center text-2xl font-bold mb-6 p-2">VAT Calculator (@ 20%)</h2>
     
       <div class="mb-4">
         <div class="flex justify-between">
@@ -226,10 +287,12 @@
         <input onfocus="clearInput(this)" type="string" id="vatAmount" class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="10" required>
       </div>
 
-      <button type="button" onclick="addVat()" class="vat mt-2 py-2 px-4 rounded-md font-bold">Add VAT</button>
+    <div class="flex justify-between items-center">
+      <button type="button" onclick="addVat()" class="vat mt-3 py-2 px-3 rounded-md font-bold text-sm">Add VAT</button>
       
-      <p id="resultVat"></p>
-    </form>
+      <p id="resultVat" class="text-2xl"></p>
+    </div>
+  </form>
 
   </div>
 
@@ -241,7 +304,7 @@
 
   <div class="min-w-full md:min-w-[450px] mx-auto">
     
-    <form id="percentageForm5" class="wage max-w-md mx-auto p-8 rounded-md shadow-md">
+    <form id="percentageForm5" class="wage max-w-md mx-auto p-6 rounded-md shadow-md">
     
     <h2 class="wage text-center text-2xl font-bold mb-6 p-2">Calculate UK Wage (Under 50K)</h2>
 
